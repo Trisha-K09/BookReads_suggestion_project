@@ -1,0 +1,98 @@
+<!--<style>
+    .overlay{
+        background-color:black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0px;
+        left:0px;
+        opacity:0.8;
+        z-index: 1;
+        display:none;
+    }
+    .popupbox{
+        position:absolute;
+        background-color: white;
+        color:black;
+        z-index: 3;
+        width:40%;
+        padding:20px;
+        left:30%;
+        border-radius: 10px;
+        display:none;
+      
+
+    }
+</style>
+<button onclick="show()">show</button>
+<div class="overlay"></div>
+<div class="popupbox">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores necessitatibus quia minus saepe? Animi dolorem ipsum praesentium dignissimos corrupti.</p>
+    <button onclick="closepopup()">close</button>
+</div>
+<script>
+    var popupoverlay=document.querySelector(".overlay");
+    var popupbox=document.querySelector(".popupbox");
+    function show(){
+        popupbox.style.display="block";
+        popupoverlay.style.display="block";
+
+    }
+    function closepopup(){
+        popupbox.style.display="none";
+        popupoverlay.style.display="none";
+    }
+
+</script>
+<button id="one">Show</button>
+<script>
+    var button=document.getElementById("one");
+    button.addEventListener("click",function(){
+        alert("Hey you!");
+    })
+</script>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookReads</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.google.com/share?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900">
+
+</head>
+<body>
+    
+    <div class="navbar">
+        <h1>BookReads</h1>
+    </div>
+    <div class="container">
+        <div class="book-container">
+            <h2>Think Like A Monk</h2>
+            <h5> By Jay Shetty</h5>
+            <br>
+            <p>Think Like a Monk reveals how to overcome negative thoughts and habits, and access the calm and purpose that lie within all of us. He transforms abstract lessons into advice and exercises we can all apply to reduce stress, improve relationships, and give the gifts we find in ourselves to the world.</p>
+            <button onclick="deletebook(event)">Delete</button>
+    </div>
+   
+    </div>
+    </div>
+     <div class="popup-overlay"></div>
+     <div class="popup-box">
+        <h2>Add Book</h2>
+        <form>
+            <input placeholder="Book Title" id="book-title-input">
+            <input placeholder="Book Author" id="book-author-input">
+            <textarea placeholder="Short Description" id="book-description-input"></textarea>
+            <button id="add-book">Add</button>
+            <button id="popup-cancel">Cancel</button>
+        </form>
+     </div>
+         
+     </div>
+    <button class="add-button" id="add-popup-button"> +</button>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+
